@@ -2,26 +2,16 @@ package desafio.domain;
 
 import java.time.LocalDate;
 
-public class Mentoring {
+public class Mentoring extends Contents{
 
-    private String title;
-    private String description;
     private LocalDate date;
 
-    public String getTitle() {
-        return title;
+    @Override
+    public double calculateXp() {
+        return XP_PATTERN + 20d;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public Mentoring() {
     }
 
     public LocalDate getDate() {
@@ -35,9 +25,10 @@ public class Mentoring {
     @Override
     public String toString() {
         return "Mentoring{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
+                "title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", date=" + date +
                 '}';
     }
+
 }

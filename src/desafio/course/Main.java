@@ -2,7 +2,6 @@ package desafio.course;
 
 import desafio.domain.Course;
 import desafio.domain.Mentoring;
-
 import java.time.LocalDate;
 
 public class Main {
